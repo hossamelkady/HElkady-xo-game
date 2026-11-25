@@ -1,0 +1,10 @@
+{
+  "name": "helkady-xo-game",
+  "version": "1.0.0",
+  "description": "Tic-tac-toe PWA: two players or vs computer (easy / medium / hard minimax) with a saved scoreboard.",
+  "scripts": {
+    "test": "node test.js",
+    "start": "npx --yes serve ."
+  },
+  "license": "MIT"
+}

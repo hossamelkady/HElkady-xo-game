@@ -1,0 +1,8 @@
+{
+  "appId": "com.helkady.xogame",
+  "appName": "إكس أو",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  }
+}

@@ -14,6 +14,8 @@ function computerMove(b,me,level,rng){rng=rng||Math.random;const e=empties(b);if
  if(level==='easy')return pick(e);
  if(level==='medium'&&rng()<0.5)return pick(e);
  return pick(bestMove(b.slice(),me));}
-const api={winner,empties,bestMove,computerMove,LINES};
+function loadScore(raw){const d={X:0,O:0,D:0};try{const v=JSON.parse(raw);if(!v||typeof v!=='object'||Array.isArray(v))return d;
+ for(const k of ['X','O','D']){const n=v[k];d[k]=Number.isInteger(n)&&n>=0&&n<=1e9?n:0;}}catch(e){}return d;}
+const api={loadScore,winner,empties,bestMove,computerMove,LINES};
 if(typeof module!=='undefined')module.exports=api;else root.XO=api;
 })(typeof window!=='undefined'?window:globalThis);
